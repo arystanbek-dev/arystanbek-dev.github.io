@@ -154,7 +154,8 @@ const WORKS = [
     en: ["New Year Taplink", "A ready Taplink page dressed for the New Year: same structure and functions, new style and decor. The brand is made up."] },
 ];
 
-// Код жобалары: мәтіні portfolio/content.py-дан (Telegraph портфолиосы), сандары сонда тексерілген.
+// Код жобалары: бұрынғы Telegraph портфолиосының 14 жобасы. Сандарын Freelance Ops репосындағы
+// tools/portfolio_facts.py жобалардың өзінен қайта санап тексереді (P2P сандары әдейі қатырылған).
 const PROJECTS = [
   { stack: "Python, Telethon, SQLite",
     kk: ["Telegram чаттарынан тапсырыс табатын көмекші", "Топтағы жаңа хабарды сүзіп, тапсырыс болса иесіне батырмалы хабар жібереді; растаған соң клиентке жеке хат кетеді.", "378 автотест"],
