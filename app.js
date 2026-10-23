@@ -10,7 +10,7 @@ const UI = {
     cta_wa: "WhatsApp-қа жазу", cta_tg: "Telegram-ға жазу", cta_channel: "Арна · @arystan_motion",
     hero_note: "Алдымен «төленбеген» деген жазуы бар нұсқаны көресіз, ұнаса төлейсіз, сосын таза файл.",
     works_title: "Жұмыстар", works_sub: "Видеоны басыңыз — дыбысымен ойнайды.",
-    sec_reels: "Reels және тік видео", sec_logo: "Логотип анимациясы", sec_motion: "Моушн және түсіндірме видео",
+    sec_reels: "Reels және тік видео", sec_logo: "Логотип анимациясы", sec_motion: "Моушн және түсіндірме видео", sec_design: "Веб-дизайн", open_live: "Тірі бетті ашу",
     prices_title: "Баға",
     p1_name: "Reels / эксперттік видео монтажы", p1_price: "3 000 ₸-ден",
     p1_text: "Instagram, TikTok, YouTube Shorts үшін: кесу, субтитр, музыка, эффект.",
@@ -40,7 +40,7 @@ const UI = {
     cta_wa: "Написать в WhatsApp", cta_tg: "Написать в Telegram", cta_channel: "Канал · @arystan_motion",
     hero_note: "Сначала вы видите версию с надписью «не оплачено», если нравится — оплачиваете и получаете чистый файл.",
     works_title: "Работы", works_sub: "Нажмите на видео — оно включится со звуком.",
-    sec_reels: "Reels и вертикальные видео", sec_logo: "Анимация логотипа", sec_motion: "Моушн и объясняющие видео",
+    sec_reels: "Reels и вертикальные видео", sec_logo: "Анимация логотипа", sec_motion: "Моушн и объясняющие видео", sec_design: "Веб-дизайн", open_live: "Открыть страницу",
     prices_title: "Цены",
     p1_name: "Монтаж reels / экспертных видео", p1_price: "от 3 000 ₸",
     p1_text: "Для Instagram, TikTok, YouTube Shorts: нарезка, субтитры, музыка, эффекты.",
@@ -70,7 +70,7 @@ const UI = {
     cta_wa: "Message on WhatsApp", cta_tg: "Message on Telegram", cta_channel: "Channel · @arystan_motion",
     hero_note: "You first see a version marked “unpaid”; if you like it, you pay and get the clean file.",
     works_title: "Work", works_sub: "Tap a video to play it with sound.",
-    sec_reels: "Reels and vertical video", sec_logo: "Logo animation", sec_motion: "Motion and explainer videos",
+    sec_reels: "Reels and vertical video", sec_logo: "Logo animation", sec_motion: "Motion and explainer videos", sec_design: "Web design", open_live: "Open the live page",
     prices_title: "Prices",
     p1_name: "Reels / talking-head video editing", p1_price: "from 3,000 ₸",
     p1_text: "For Instagram, TikTok, YouTube Shorts: cuts, subtitles, music, effects.",
@@ -148,6 +148,10 @@ const WORKS = [
     kk: ["The 2.5 MB problem", "Windows тазалау жобасының видеосы. Бірде-бір сан ойдан алынбаған."],
     ru: ["The 2.5 MB problem", "Видео о проекте очистки Windows. Ни одной выдуманной цифры."],
     en: ["The 2.5 MB problem", "A video about a Windows cleanup case. Every number is real."] },
+  { id: "taplink_ny", group: "design", link: "taplink/",
+    kk: ["Жаңа жылдық Taplink", "Дайын Taplink бетін жаңа жылға безендіру: құрылымы мен функциясы өзгермейді, стилі мен декоры жаңа. Бренд ойдан шығарылған."],
+    ru: ["Новогодний Taplink", "Новогоднее оформление готового Taplink: структура и функции те же, меняются стиль и декор. Бренд придуман для примера."],
+    en: ["New Year Taplink", "A ready Taplink page dressed for the New Year: same structure and functions, new style and decor. The brand is made up."] },
 ];
 
 // Код жобалары: мәтіні portfolio/content.py-дан (Telegraph портфолиосы), сандары сонда тексерілген.
@@ -239,6 +243,12 @@ function renderWorks() {
     frame.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); play(frame, w.id); } });
     const cap = el("figcaption");
     cap.append(el("b", null, title), el("span", null, text));
+    // a design work has a live page next to its video
+    if (w.link) {
+      const a = el("a", null, UI[lang].open_live);
+      a.href = w.link; a.target = "_blank"; a.rel = "noopener";
+      cap.append(a);
+    }
     fig.append(frame, cap);
     document.querySelector(`[data-group="${w.group}"]`).append(fig);
   }
