@@ -218,6 +218,9 @@ const LANGS = ["kk", "ru", "en"];
 let lang = "kk";
 
 function pickLang() {
+  // Клиентке жіберілген сілтемедегі тіл (?lang=ru) бәрінен басым.
+  const asked = new URLSearchParams(location.search).get("lang");
+  if (LANGS.includes(asked)) return asked;
   try {
     const saved = localStorage.getItem("lang");
     if (LANGS.includes(saved)) return saved;
