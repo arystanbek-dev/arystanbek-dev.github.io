@@ -1,0 +1,41 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>@font-face { font-family: Inter; src: url(fonts/Inter-Regular.woff); font-weight: 400; }
+@font-face { font-family: Inter; src: url(fonts/Inter-Medium.woff); font-weight: 500; }
+@font-face { font-family: Inter; src: url(fonts/Inter-SemiBold.woff); font-weight: 600; }
+@font-face { font-family: Cormorant; src: url(fonts/CormorantGaramond.woff); font-weight: 300 700; }
+@font-face { font-family: Cormorant; src: url(fonts/CormorantGaramond-Italic.woff); font-weight: 300 700; font-style: italic;}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Inter, sans-serif; -webkit-font-smoothing: antialiased; }
+.page { position: relative; width: 100%; max-width: 390px; margin: 0 auto; padding: 70px 20px 96px; overflow: hidden; }   /* 96: room under the "до / после" switch */
+.head { position: relative; text-align: center; }
+.avatar { position: relative; width: 104px; height: 104px; margin: 0 auto 16px; }
+.avatar .disc { width: 100%; height: 100%; border-radius: 50%; display: grid; place-items: center; }
+.name { font-size: 22px; font-weight: 600; letter-spacing: .2px; }
+.about { margin: 8px auto 24px; max-width: 300px; font-size: 14px; line-height: 1.45; }
+.btn { position: relative; display: flex; align-items: center; gap: 12px; height: 54px; margin-bottom: 10px;
+       padding: 0 18px; border-radius: 14px; font-size: 15px; font-weight: 500; text-decoration: none; }
+.btn .ic { width: 22px; height: 22px; flex: none; }
+.btn span { flex: 1; text-align: center; margin-right: 34px; }
+.card { position: relative; margin-top: 18px; padding: 18px 18px 8px; border-radius: 16px; }
+.card h2 { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; margin-bottom: 10px; }
+.card h2 .ic { width: 20px; height: 20px; }
+.row { display: flex; align-items: baseline; gap: 8px; padding: 9px 0; font-size: 14px; }
+.row .dots { flex: 1; border-bottom: 1px dotted currentColor; opacity: .35; transform: translateY(-4px); }
+.row b { font-weight: 600; white-space: nowrap; }
+.info { display: flex; align-items: center; gap: 10px; padding: 0 0 12px; font-size: 14px; }
+.info .ic { width: 20px; height: 20px; flex: none; }
+.socials { display: flex; justify-content: center; gap: 14px; margin-top: 26px; }
+.socials a { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; }
+.socials .ic { width: 22px; height: 22px; }
+.demo { position: relative; margin: 26px auto 0; max-width: 300px; text-align: center; font-size: 11px; line-height: 1.5; opacity: .55; }
+.demo a { color: inherit; }
+
+body { background: #fff; color: #2b2b2b; }
+.avatar .disc { background: #f6dde5; color: #b85c7a; font: 600 40px Inter; }
+.about { color: #6f6f6f; }
+.btn { background: #e9a3b8; color: #fff; }
+.card { background: #f6f6f7; }
+.card h2 { color: #2b2b2b; }
+.info { color: #555; }
+.socials a { background: #f6dde5; color: #b85c7a; }
+</style></head><body><main class="page"><div class="head"><div class="avatar"><div class="disc">M</div></div><h1 class="name">MIRA beauty studio</h1><p class="about">Маникюр, педикюр и брови в центре Астаны. Стерильно, уютно, без очередей</p></div><a class="btn" href="https://wa.me/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18l1.2-3.6A8 8 0 1 1 8.4 18.8z"/><path d="M9.5 9.5c.3 1.8 2.2 3.7 4 4l1-1 1.8.8-.4 1.6c-3.2.3-7-3.5-6.7-6.7l1.6-.4.8 1.8z"/></svg><span>Записаться в WhatsApp</span></a><a class="btn" href="https://t.me/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4L3 11l6 2 2 6 3-4 4 3z"/><path d="M9 13l12-9"/></svg><span>Написать в Telegram</span></a><a class="btn" href="https://www.instagram.com/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".6"/></svg><span>Наши работы в Instagram</span></a><a class="btn" href="https://2gis.kz/astana" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10" r="2.4"/></svg><span>Как нас найти</span></a><section class="card"><h2><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7h11M8 12h11M8 17h11"/><circle cx="4.5" cy="7" r=".8"/><circle cx="4.5" cy="12" r=".8"/><circle cx="4.5" cy="17" r=".8"/></svg>Прайс</h2><div class="row"><span>Маникюр с покрытием</span><i class="dots"></i><b>8 000 ₸</b></div><div class="row"><span>Педикюр с покрытием</span><i class="dots"></i><b>10 000 ₸</b></div><div class="row"><span>Коррекция бровей</span><i class="dots"></i><b>6 000 ₸</b></div><div class="row"><span>Наращивание ресниц</span><i class="dots"></i><b>12 000 ₸</b></div></section><section class="card"><h2><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10" r="2.4"/></svg>Контакты</h2><div class="info"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Ежедневно 10:00–21:00</div><div class="info"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10" r="2.4"/></svg>Астана, Есильский район</div></section><div class="socials"><a href="https://wa.me/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18l1.2-3.6A8 8 0 1 1 8.4 18.8z"/><path d="M9.5 9.5c.3 1.8 2.2 3.7 4 4l1-1 1.8.8-.4 1.6c-3.2.3-7-3.5-6.7-6.7l1.6-.4.8 1.8z"/></svg></a><a href="https://t.me/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4L3 11l6 2 2 6 3-4 4 3z"/><path d="M9 13l12-9"/></svg></a><a href="https://www.instagram.com/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".6"/></svg></a></div><p class="demo">Демо-страница: пример новогоднего оформления Taplink · дизайн <a href="https://t.me/arystan_motion" target="_blank" rel="noopener">Arystan Motion</a></p></main></body></html>
